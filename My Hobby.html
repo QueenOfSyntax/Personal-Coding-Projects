@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Imaginary Inkland</title>
+		<style>
+			body {
+				background: linear-gradient(
+					180.3deg,
+					rgb(221, 221, 221) 5.5%,
+					rgb(110, 136, 161) 90.2%
+				);
+				font-family: Arial, Helvetica, sans-serif;
+			}
+
+			h1 {
+				background: #0c056d;
+				color: white;
+				font-size: 60px;
+				margin-bottom: -40px;
+				padding: 0;
+				text-align: right;
+			}
+
+			h2 {
+				border: 1px solid #0c056d;
+				border-radius: 4px;
+				font-size: 30px;
+				padding: 10px;
+				text-align: center;
+			}
+
+			h3 {
+				font-size: 18px;
+				text-align: left;
+			}
+
+			p {
+				font-size: 18px;
+				line-height: 1.5;
+				text-align: left;
+			}
+
+			a {
+				text-decoration: none;
+			}
+
+			a:hover {
+				text-decoration: underline;
+			}
+
+			li {
+				margin-right: 100px;
+			}
+
+			ul {
+				background: #0c056d;
+				color: white;
+				list-style-type: none;
+				display: flex;
+				justify-content: left;
+				align-items: center;
+				padding: 10px;
+			}
+
+			button {
+				background: #0c056d;
+				border: none;
+				border-radius: 5px;
+				color: white;
+				cursor: pointer;
+				display: inline;
+				margin-right: 10px;
+				padding: 10px;
+				transition: all 200ms ease-in-out;
+			}
+
+			button:hover {
+				background: white;
+				color: #0c056d;
+			}
+
+			img {
+				border-radius: 10px;
+				display: block;
+				margin: 0 auto;
+				max-width: 100%;
+			}
+
+			.container {
+				margin: 0 auto;
+				max-width: 800px;
+				padding: 5px 60px;
+			}
+
+			.menu {
+				font-size: 16px;
+			}
+
+			.footer {
+				font-size: 14px;
+				font-weight: 500;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Imaginary Inkland</h1>
+			<br />
+			<span class="menu">
+				<ul>
+					<li>
+						<button class="home">Home</button>
+					</li>
+
+					<li>
+						<button class="about">About Me</button>
+					</li>
+
+					<li>
+						<button class="reviews">Book Reviews & more</button>
+					</li>
+
+					<li>
+						<button class="contactMe">Contact Me</button>
+					</li>
+				</ul>
+			</span>
+
+			<h2>About Me</h2>
+
+			<h3>Hi 👋! I call myself Reign</h3>
+
+			<p class="body">
+				Welcome to my landing page about my favorite hobby,
+				<strong>* reading *</strong>! I'm passionate about books and
+				love exploring the different genres and authors. To be honest
+				maybe my middle name should have been Libro (which means book in
+				Spanish) or Paige (which is a play on "page" in a book) or even
+				Reed (as it resembles the word "read"), because thats how much I
+				love readng😅. There's really nothing quite like diving into a
+				really good story and getting lost in the pages of a book.
+				Whether it's fiction, non-fiction, or poetry, books have always
+				been a source of joy and knowledge for me. And *wink-wink* my
+				favourite novel at the moment is:
+
+				<a
+					href="https://www.amazon.com/Fault-Our-Stars-John-Green/dp/014242417X/ref=sr_1_2?crid=2UNGDGTLGZOM7&keywords=the+fault+in+our+stars&qid=1690683250&sprefix=The+fa%2Caps%2C408&sr=8-2"
+				>
+					"The fault in our stars" by John Green.
+				</a>
+				<em>Anyways, welcome to my about me page 🤗</em>
+			</p>
+			<div class="img">
+				<img
+					src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/091/604/original/A_cutesy_artsy_girlish_with_books_as_the_focal_point_in_a_semi_dark_fantastical_color_scheme_with_a__1780192920.png?1690719561"
+				/>
+
+				<br />
+				<p>
+					If you share the same love for books or have any book
+					recommendations for me, hit that contact button to get in
+					touch!
+				</p>
+
+				<hr />
+			</div>
+
+			<p class="footer">Coded by 👩🏽‍💻 Reign</p>
+		</div>
+		<script>
+			function home() {
+				alert("Hey fellow reader, this page is currently unavailable");
+			}
+
+			let homeButton = document.querySelector(".home");
+			homeButton.addEventListener("click", home);
+
+			function aboutMe() {
+				alert("Hey fellow reader, you are currently on this page");
+			}
+
+			let aboutMeButton = document.querySelector(".about");
+			aboutMeButton.addEventListener("click", aboutMe);
+
+			function review() {
+				alert("Hey fellow reader, this page is currently unavailable");
+			}
+
+			let reviewButton = document.querySelector(".reviews");
+			reviewButton.addEventListener("click", review);
+
+			function contact() {
+				let name = prompt("What is your name?");
+				let hobby = prompt("What is your favourite hobby?");
+				let email = prompt("What is your email address?");
+
+				if (name !== "" && hobby !== "" && email !== "") {
+					alert(
+						"Thanks " +
+							name +
+							"! We'll be in touch by email. Meanwhile, keep on reading✊"
+					);
+				} else {
+					if (name === "") {
+						alert("Please provide your name");
+					}
+
+					if (hobby === "") {
+						alert("Please tell us your hobby");
+					}
+
+					if (email === "") {
+						alert("Please provide your email address.");
+					}
+				}
+			}
+			let contactButton = document.querySelector(".contactMe");
+			contactButton.addEventListener("click", contact);
+		</script>
+	</body>
+</html>

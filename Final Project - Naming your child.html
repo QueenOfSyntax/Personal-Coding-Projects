@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>The importance of a good name</title>
+		<style>
+			strong {
+				font-weight: 700;
+			}
+
+			body {
+				background: #f4f3f3;
+			}
+
+			h1 {
+				color: #631357;
+				text-align: center;
+			}
+
+			h2 {
+				border: 1px solid #631357;
+				border-radius: 4px;
+				font-size: 24px;
+				padding: 15px;
+				text-align: center;
+			}
+
+			h3 {
+				text-align: center;
+			}
+
+			img {
+				display: block;
+				border-radius: 10px;
+				margin: 0 auto;
+				max-width: 100%;
+			}
+
+			p {
+				font-size: 18px;
+				line-height: 1.5;
+			}
+
+			button {
+				background: #631357;
+				border: none;
+				border-radius: 15px;
+				box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+				color: #dfcdc3;
+				display: block;
+				margin: 0 auto;
+				font-size: 18px;
+				padding: 12px 20px;
+				transition: all 200ms ease-in-out;
+			}
+
+			button:hover {
+				opacity: 0.92;
+				cursor: pointer;
+			}
+
+			.container {
+				margin: 0 auto;
+				max-width: 800px;
+				padding: 30px 60px;
+			}
+
+			.emoji {
+				text-decoration: none;
+			}
+
+			.footer {
+				font-size: 18px;
+				text-align: center;
+			}
+
+			.learn-more {
+				color: #631357;
+				display: block;
+				margin: 10px 0 0 0;
+				text-decoration: none;
+			}
+
+			.learn-more:hover {
+				text-decoration: underline;
+			}
+
+			.name-dictionary {
+				color: #dfcdc3;
+				text-decoration: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Hello, my name is...</h1>
+
+			<img
+				src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/091/455/original/Hello_my_name_is.jpg?1690565565"
+				alt="A Name Tag"
+			/>
+
+			<br />
+
+			<h2>What's in a Name?</h2>
+
+			<img
+				src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/091/454/original/What's_in_a_name.jpeg?1690565342"
+				width="620"
+				height="400"
+				alt="What is in a name?"
+			/>
+
+			<br />
+
+			<h3>The Power of Names: Shaping Lives and Embracing Destiny</h3>
+
+			<p>
+				Choosing a child's name is a significant decision, as it
+				reflects parents' hopes, dreams, and expectations for their
+				future. In biblical contexts, God often changed names to
+				establish new identities or convey His message. Names can hold
+				various meanings, symbolizing aspects of a person's birth or
+				expressing parents' reactions.
+				<em>Seeking God's guidance in selecting a name is crucial</em>,
+				as names have the power to shape lives and set the course for
+				one's destiny.
+			</p>
+
+			<a
+				href="https://www.linkedin.com/pulse/significance-naming-child-arnold-makumba/"
+				target="_blank"
+				class="learn-more"
+			>
+				<span class="emoji">📖</span> Click here to read in detail
+			</a>
+			<br />
+			<br />
+			<img
+				src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/091/453/original/A_good_name.jpg?1690565310"
+				alt="A good name is to be chosen"
+			/>
+			<br />
+			<br />
+			<button class="searchName">
+				<a
+					href="https://www.babynamespedia.com/"
+					target="_blank"
+					class="name-dictionary"
+				>
+					👉 Search the meaning of your name</a
+				>
+			</button>
+			<br />
+			<hr />
+			<p class="footer">
+				This page was built by 👩🏽‍💻
+				<a
+					href="https://www.linkedin.com/in/joyce-kamalu-75051b243/"
+					target="_blank"
+				>
+					<strong>Joyce Kamalu</strong>
+				</a>
+			</p>
+		</div>
+		<script>
+			function search() {
+				let name = prompt("What is your name?");
+				let email = prompt("What is your email address?");
+
+				if (name !== "" && email !== "") {
+					alert(
+						"Thank you " +
+							name +
+							", we'll be in touch. Meanwhile head onto the following and find the meaning of your child's name"
+					);
+				} else {
+					if (name === "") {
+						alert("Please provide your name");
+					} else {
+						alert("Please provide your email address.");
+					}
+				}
+			}
+
+			let searchButton = document.querySelector(".searchName");
+			searchButton.addEventListener("click", search);
+		</script>
+	</body>
+</html>
